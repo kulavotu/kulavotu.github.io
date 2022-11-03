@@ -1,0 +1,53 @@
+body {max-width: 100%;}
+section#Help, section#Legal, section#Company, section#Title {font-size: 1.7em; float: left; margin: 0% 0% 0% 0%; padding: 0 0 0 0; width: 25%;}
+section#Leverage, section#Volatility, section#RiskManagement {float:left; width: 30%; padding: 1%; margin:0;}
+section#Poetry{font-family: 'Patrick Hand SC', cursive; font-size: 1.66em; color: black; text-align:center;}
+caption {font-family: 'Rock Salt', cursive; font-size: 0.66em; color: black; text-align:center;}
+#section0{opacity: 98%;}
+#section1{opacity: 98%;}
+#section2{opacity: 98%; padding}
+#section3{background-image: url(); background-size: 100% 100%; background-repeat: no-repeat; opacity: 100%;}
+section#RiskDisclosure
+{
+	font-family: 'Vollkorn SC', serif;
+	font-weight: 700;
+}
+#footer{
+	font-family: 'Playfair Display', serif;
+	font-size:0.9em;
+    position:fixed;
+	height: 50px;
+	display:block;
+	width: 100%;
+	background:none;
+	z-index:9;
+	text-align:center;
+	color: black;
+	padding: 20px 0 0 0;
+	bottom:-30px;}
+
+#header{
+	max-width: 100%;
+	position:fixed;
+	height: 50px;
+	width: 100%;
+	background:none;
+	z-index:9;
+	text-align:center;
+	color: #ffffff;
+	padding: 20px 0 0 0;
+	top:5px;}	
+}
+article, aside{ display:block;}
+article, aside {float:left;}
+article {width: 550px; height: 20px;font-family: 'Vollkorn SC', serif; padding: 5%;}
+
+.analyzebutton
+{
+	
+	width: 90px; 
+	height:45px;	
+}
+
+
+

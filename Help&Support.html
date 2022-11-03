@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Help&Support | kulavotu.co.ke</title>
+		<link rel="stylesheet" type="text/css" href="project.css">
+		<link rel="stylesheet" type="text/css" href="hns.css">
+		<link rel="stylesheet" type="text/css" href="proj.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="scrolloverflow.js"></script>
+
+		<script type="text/javascript" src="project.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					autoScrolling: false,
+					fitToSection: false,
+					sectionsColor: ['white']
+				});
+			});
+		</script>
+
+	</head>
+	<body>
+		<div id="header">
+			<div class="navigation">
+				<div class="menuToggle"></div>
+					<div class="menu">
+						<ul>
+							<li style="--ki:0.1s;"><a href="kulavotu.html"><span class="material-symbols-outlined">home</span></a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<script>
+			let menuToggle = document.querySelector('.menuToggle');
+				menuToggle.onclick = function(){
+					menuToggle.classList.toggle('active');
+				}
+		</script>
+		<div id="fullpage">
+			<div class="section active" id="section0">
+				<div class="Help&Support">
+					<hgroup>
+						<h1>Help & Support</h1>
+						<h2>for Kulavotu.co.ke</h2><br>
+						<hr>
+					</hgroup>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

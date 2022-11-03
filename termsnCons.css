@@ -1,0 +1,137 @@
+
+h2{font-family: 'Passions Conflict', cursive; font-size: 3.9em; color: black; text-align:center;font-weight: 1;}
+h3{font-family: 'Passions Conflict', cursive; font-size: 2.9em; color: black; text-align:center;font-weight: 1;}
+p,li{font-family: 'Vollkorn SC', serif; color: black;font-size: 1.0em; text-align:center;}
+.fullpage{}
+.section0{}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.navigation{margin:0 0 0 0;display: flex;justify-content: center;align-items: center;}
+
+.menuToggle{margin:0 -75% 0 0;position:relative;width:55px;height:55px;background:none;cursor:pointer;z-index:7;transform:translateY(0px);}
+
+.menuToggle::before
+{
+	content:'_|_||_|_';
+	position: absolute;
+	font-size: 1em;
+	font-weight: 500;
+	color: black;
+	transition: 1.3s;
+}
+
+.menuToggle.active:before
+{
+	transform: rotate(360deg);
+}
+
+.menu
+{
+	margin:0 -75% 0 0;
+	position: absolute;
+	width:60px;
+	height:60px;
+	background: black;
+	border-radius: 70px;
+	transform: translateY(-30px);
+}
+
+.menuToggle ki
+{
+	position:absolute;
+	inset: 0;
+}
+.menuToggle ki::before
+{
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: -23px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	
+}
+
+.menuToggle ki::after
+{
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: -23px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+}
+
+.menu
+{
+	position: absolute;
+	width: 360px;
+	height: 70px;
+	background: transparent;
+	border-radius: 70px;
+	transform: translateY(-30px);
+	transition: transform 0.5s, width 0.5s, height 0.5s;
+	transition-delay: 1s, 0.5s, 0.5s;
+}
+.menuToggle.active ~ .menu
+{
+	width: 360px;
+	height: 70px;
+	transform: translateY(0px);
+	transition-delay: 0s, 0.5s, 0.5s;
+}
+.menu ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 90px;/*adjusts space between menu button and contents of the menu.*/
+	
+}
+
+.menu ul li
+{
+	list-style:none;
+	cursor: pointer;
+	opacity: 0;
+	visibility: visible;
+	transition: 0.25s;
+	transition-delay: calc(0s + var(--ki));
+	transform: translateY(90px); /*brings the menu from the bottom and a -90 will bring it from above.*/
+}
+
+.menuToggle.active ~.menu ul li
+{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: calc(0.75s + var(--ki));
+	transform: translateY(0px);
+}
+
+.menu ul li:nth-child(4)
+{
+	width:30px;
+	
+}
+.menu ul li a
+{
+	display: block;
+	font-size: 4em;
+	text-decoration: none;
+	color: black;
+}
+
+.menu ul li:hover a
+{
+	color: red;
+}

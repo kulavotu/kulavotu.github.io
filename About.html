@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>About | kulavotu.co.ke</title>
+		<link rel="stylesheet" type="text/css" href="project.css" />
+		<link rel="stylesheet" type="text/css" href="about.css">
+		<link rel="stylesheet" type="text/css" href="proj.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+		<script type="text/javascript" src="scrolloverflow.js"></script>
+		<script type="text/javascript" src="project.js"></script>
+		<script src="jquery3.6.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					autoScrolling: false,
+					fitToSection: false,
+					sectionsColor: ['white']
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="navigation">
+				<div class="menuToggle"></div>
+					<div class="menu">
+						<ul>
+							<li class="active" style="--ki:0.1s;"><a href="index.html"><span class="material-symbols-outlined">home</span></a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+		<script>
+			let menuToggle = document.querySelector('.menuToggle');
+				menuToggle.onclick = function(){
+					menuToggle.classList.toggle('active');
+				}
+		</script>
+		<div id="fullpage">
+			<div class="section active" id="section0">
+			<h1>Who Are We?</h1>
+			<hr>
+			<p>Kulavotu is a financial website geared towards retail traders, investors and any interested parties</p>
+			<hr>
+			<h1>Mission Statement<br>~</h1>
+			<hr>
+			<p>Kulavotu aims at easing the process of plotting lines on charts as well as reduce the time taken in seeking out the best indicators available in the market, rendering only the important features of each security.</p>
+			<hr>
+			<h1>~	Values	~</h1>
+			<hr>
+			<p>We value your time and patience and we aim in making your journey beautiful and with a dash of technicality.</p>
+			<hr>
+
+			</div>
+		</div>
+	</body>
+</html>
