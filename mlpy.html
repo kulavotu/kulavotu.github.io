@@ -24,7 +24,7 @@
 					autoScrolling: false,
 					fitToSection: true,
 					sectionsColor: ['white','white','white','white'],
-					anchors: ['firstPage', 'secondPage'],
+					anchors: ['firstPage', 'secondPage','lastpage'],
 					menu: '#menu',
 					continuousVertical: true
 
@@ -41,6 +41,7 @@
 						<ul>
 							<li data-menuanchor="firstPage" class="active" style="--ki:0.1s;"><a href="#firstPage"><span class="material-symbols-outlined">show_chart</span></a></li>
 							<li data-menuanchor="secondPage" style="--ki:0.2s;"><a href="#secondPage"><span class="material-symbols-outlined">auto_graph</span></a></li>
+							<li data-menuanchor="lastPage" style="--ki:0.2s;"><a href="#lastPage"><span class="material-symbols-outlined">system</span></a></li>
 							<li style="--ki:0.1s;"><a href="index.html"><span class="material-symbols-outlined">all_inclusive</span></a></li>
 						</ul>
 					</div>
@@ -65,14 +66,14 @@
 					<article>
 						<label class="label">Security:</label>
 						<div class="control">
-							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br><br>
+							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD" id="security_selected" rows='4' cols='30' required="required" autocomplete="on"></textarea><br><br>
 							<label class="label">Window Size:</label><br>
-							<textarea class="textarea" placeholder="1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max" id="period_selected" rows='1' required="required" autocomplete="on"></textarea><br>
+							<textarea class="textarea" placeholder="1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max" id="period_selected" rows='1' cols='40' required="required" autocomplete="on"></textarea><br>
 							<button id="DisplayChart" type="button" class="button is-primary" py-onClick="DisplayChart()"><h7>View</h7></button><br><br>
 							<button id="Erase" type="button" class="button is-danger" py-onClick="ClearChartSection()"><h7>clear area</h7></button><br><br>
 						</div>
 					</article>
-					<h7>Window</h7>
+					<h7>~Window~</h7>
 					<div class="wrap">
 						<div class="box">
 						</div>
@@ -88,17 +89,56 @@
 					<article>
 						<label class="label">Security:</label>
 						<div class="control">
-							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD, e.t.c" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br>
+							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD, e.t.c" id="security_selected" rows='4' cols='30' required="required" autocomplete="on"></textarea><br>
 						</div>
+						<br>
 						<label class="label">Analysis Period:</label>
 						<div class="control">
-							<textarea class="textarea" placeholder="1jumps, 5jumps, 10jumps, 12jumps, 14jumps" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br>
-						<button id="Trend_Analysis" type="button" class="button is-primary" py-onClick="Trend_Analysis()"><h7>Analyze</h7></button><br><br>
-							<button id="Erase" type="button" class="button is-danger" py-onClick="ClearSecurityonTrendAnalysis()"><h7>clear area</h7></button><br><br>
+							<textarea class="textarea" placeholder="1jumps, 5jumps, 10jumps, 12jumps, 14jumps" id="security_selected" rows='1' cols='40' required="required" autocomplete="on"></textarea><br>
+						<button id="Trend_Analysis" type="button" class="button is-primary" py-onClick="Trend_Analysis()"><h7>Analyze</h7></button>
+							<button id="Erase" type="button" class="button is-danger" py-onClick="ClearSecurityonTrendAnalysis()"><h7>clear area</h7></button>
 						</div>
 					</article>
 						<h7>
 							~Kulavotu Sentiments~<br><br><code id="Trend_Analysis_output">Sentiments</code>
+						</h7>
+				</form>	
+			</div>
+			<hr>
+			<div class="section" id="section2">
+				<form class="pythoncode" id="epsys">
+					<label class="label">
+						<h1>Efficient Portfolio System</h1>
+					</label>
+					<article>
+						<label class="label">Capital:</label>
+						<div class="control">
+							<textarea class="textarea" rows='1' cols='30' required="required" autocomplete="on"></textarea>
+						</div>
+						<label class="label">Number:</label>
+						<div class="control">
+							<textarea class="textarea" rows='1' cols='3' required="required" autocomplete="on"></textarea><br>
+						<label class="label">Name:</label>
+						<div class="control">
+							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD, e.t.c" id="security_selected" rows='1' cols='60' required="required" autocomplete="on"></textarea>
+						</div>
+						<label class="label">Profit Percentage:</label>
+						<div class="control">
+							<textarea class="textarea" rows='1' cols='4' required="required" autocomplete="on"></textarea><br>
+						</div>
+						<label class="label">Risk Percentage:</label>
+						<div class="control">
+							<textarea class="textarea" id="security_selected" rows='1' cols='3' required="required" autocomplete="on"></textarea><br>
+						</div>
+						<button id="Epsys" type="button" class="button is-primary" py-onClick="epsys()"><h7>Analyze</h7></button>
+							<button id="Erase" type="button" class="button is-danger" py-onClick="Clearepsys()"><h7>clear area</h7></button>
+							<br><br>
+						</div>
+					</article>
+						<h7>
+							~Portfolio Movement~
+							<br><br>
+							<code id="epsys_output"></code>
 						</h7>
 				</form>	
 			</div>
