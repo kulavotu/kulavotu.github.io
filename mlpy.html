@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link rel="icon" href="growth-chart.png" sizes="42x42">
+		<title>Market Analysis | kulavotu.co.ke</title>
+		<link rel="stylesheet" type="text/css" href="project.css">
+		<link rel="stylesheet" type="text/css" href="mlpy.css">
+		<link rel="stylesheet" type="text/css" href="proj.css">
+		<link rel="stylesheet" type="text/css" href="menu.css">
+		<script src="jquery3.6.1.js"></script>
+		<script src="scrolloverflow.js"></script>
+		<script src="project.js"></script>
+		<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+		<py-config type="json">
+			{
+				"packages": ["numpy", "matplotlib"]
+			}
+		</py-config>
+		<script>
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					autoScrolling: false,
+					fitToSection: true,
+					sectionsColor: ['white','white','white','white'],
+					anchors: ['firstPage', 'secondPage'],
+					menu: '#menu',
+					continuousVertical: true
+
+				});
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="header">
+			<div class="navigation">
+				<div class="menuToggle"></div>
+					<div class="menu">
+						<ul>
+							<li data-menuanchor="firstPage" class="active" style="--ki:0.1s;"><a href="#firstPage"><span class="material-symbols-outlined">show_chart</span></a></li>
+							<li data-menuanchor="secondPage" style="--ki:0.2s;"><a href="#secondPage"><span class="material-symbols-outlined">auto_graph</span></a></li>
+							<li style="--ki:0.1s;"><a href="index.html"><span class="material-symbols-outlined">all_inclusive</span></a></li>
+						</ul>
+					</div>
+			</div>
+		</div>
+			<script>
+				let menuToggle = document.querySelector('.menuToggle');
+				menuToggle.onclick = function(){
+					menuToggle.classList.toggle('active');
+				}
+			</script>
+		<div id="footer">
+			&copy; 2022 BASHTULAKOVU Kenya. All Rights Reserved.
+		</div>
+
+		<div id="fullpage">
+			<div class="section active" id="section0">
+				<form class="pythoncode" id="csection">
+					<label class="label">
+						<h1>Asset Description</h1>
+					</label>
+					<article>
+						<label class="label">Security:</label>
+						<div class="control">
+							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br><br>
+							<label class="label">Window Size:</label><br>
+							<textarea class="textarea" placeholder="1d, 5d, 1mo, 3mo, 6mo, 1y, 2y, 5y, 10y, ytd, max" id="period_selected" rows='1' required="required" autocomplete="on"></textarea><br>
+							<button id="DisplayChart" type="button" class="button is-primary" py-onClick="DisplayChart()"><h7>View</h7></button><br><br>
+							<button id="Erase" type="button" class="button is-danger" py-onClick="ClearChartSection()"><h7>clear area</h7></button><br><br>
+						</div>
+					</article>
+					<h7>Window</h7>
+					<div class="wrap">
+						<div class="box">
+						</div>
+					</div>
+				</form>
+			</div>
+			<hr>
+			<div class="section" id="section1">
+				<form class="pythoncode" id="tanalysis">
+					<label class="label">
+						<h1>Assessments</h1>
+					</label>
+					<article>
+						<label class="label">Security:</label>
+						<div class="control">
+							<textarea class="textarea" placeholder="EURUSD, EURGBP, DOWJONES, BITCOIN, GOLD, e.t.c" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br>
+						</div>
+						<label class="label">Analysis Period:</label>
+						<div class="control">
+							<textarea class="textarea" placeholder="1jumps, 5jumps, 10jumps, 12jumps, 14jumps" id="security_selected" rows='2' required="required" autocomplete="on"></textarea><br>
+						<button id="Trend_Analysis" type="button" class="button is-primary" py-onClick="Trend_Analysis()"><h7>Analyze</h7></button><br><br>
+							<button id="Erase" type="button" class="button is-danger" py-onClick="ClearSecurityonTrendAnalysis()"><h7>clear area</h7></button><br><br>
+						</div>
+					</article>
+						<h7>
+							~Kulavotu Sentiments~<br><br><code id="Trend_Analysis_output">Sentiments</code>
+						</h7>
+				</form>	
+			</div>
+		</div>
+	</body>
+</html>
