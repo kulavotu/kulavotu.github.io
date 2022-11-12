@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Vollkorn+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Croissant+One&family=Handlee&family=Indie+Flower&family=Patrick+Hand+SC&family=Poiret+One&family=Zilla+Slab+Highlight&display=swap');
+
+@CHARSET "ISO-8859-1";
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,h7,h8,h9,pre,
+form,fieldset,/*input,textarea*/,p,blockquote,th,td {padding: 0;margin: 0;}
+
+a{font-family: 'Vollkorn SC', serif;text-decoration:none;color:black;font-size:0.33em;}
+
+table {border-spacing: 0;}
+
+fieldset,img {border: 0;}
+
+address,caption,cite,code,dfn,em,strong,th,var {font-weight: normal;font-style: normal;}
+
+strong{font-weight:bolder ; font-size:larger;}
+
+ol,ul {list-style: none;margin:0;padding:0;font-size:1.4ch;}
+
+th {font-family: 'Rock Salt', cursive; font-size: 0.66em; color: black; text-align:center;}
+
+h1,h2,h3,h5,h6 {font-size: 100%;margin:0;padding:0;color: black;}
+
+q:before,q:after {
+    content:'';}
+abbr,acronym {border: 0;}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+
+
+
+body{margin: 0%;}
+
+h1{font-family: 'Passions Conflict', cursive; font-size: 7.7em; color:black;text-align:left;font-weight: 1;margin: -140px 0 0 90px;}
+
+h2{font-family: 'Passions Conflict', cursive; font-size: 2em; color: black; text-align:center;}
+
+h3{font-family: 'Passions Conflict', cursive; font-size: 3.3em; color: black; text-align:center;font-weight: 1;}
+
+h4{font-family: 'Passions Conflict', cursive; font-size: 3.7em; color: black; text-align:center;font-weight: 1;}
+
+h5{font-family: 'Passions Conflict', cursive; font-size: 7.7em; color: black;text-align:center;font-weight: 1;}
+
+h6{font-family: 'Berkshire Swash', cursive; font-size: 4em; color:black;text-align:left;font-weight: 1;margin: -140px 0 0 90px;}
+
+h7{font-family: 'Berkshire Swash', cursive; font-size: 1.8em;color: black;text-align:center;}
+
+h8{font-family: 'Berkshire Swash', cursive; font-size: 1.4em;color:black;text-align:center;}
+
+h9{font-family: 'Playfair Display', serif;}
+
+p{font-family: 'Berkshire Swash', cursive; font-weight: normal;line-height: 0.8em; font-size: 2em;margin:0;padding: 10px 
+
+50px 20px;color: black;}
+ 
+em{font-family: 'Vollkorn SC', serif; color: black;font-size: 1.1em;margin: -150px 0 -150px 0;}
+
+code{font-family: 'Passions Conflict', cursive; font-size: 2.9em;}
+
+.wrap{width: 1180px;height: 100%;margin-left: auto;margin-right: auto;position: relative;}
+.box{text-align: left;color: #808080;font-size: 1.2em;line-height: 1.6em;}
+
+article{}
+aside{}
+.fullpage{}
+.section0{}
+.pythoncode{font-family: 'Vollkorn SC', serif; color: black;font-size: 1.0em;}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+.navigation{margin:0 0 0 0;display: flex;justify-content: center;align-items: center;}
+
+.menuToggle{margin:0 -75% 0 0;position:relative;width:55px;height:55px;background:none;cursor:pointer;z-index:7;transform:translateY(0px);}
+
+.menuToggle::before
+{
+	content:'_|_||_|_';
+	position: absolute;
+	font-size: 1em;
+	font-weight: 500;
+	color: black;
+	transition: 1.3s;
+}
+
+.menuToggle.active:before
+{
+	transform: rotate(360deg);
+}
+
+.menu
+{
+	margin:0 -75% 0 0;
+	position: absolute;
+	width:60px;
+	height:60px;
+	background: black;
+	border-radius: 70px;
+	transform: translateY(-30px);
+}
+
+.menuToggle ki
+{
+	position:absolute;
+	inset: 0;
+}
+.menuToggle ki::before
+{
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: -23px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	
+}
+
+.menuToggle ki::after
+{
+	content: '';
+	position: absolute;
+	top: 22px;
+	left: -23px;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+}
+
+.menu
+{
+	position: absolute;
+	width: 360px;
+	height: 70px;
+	background: transparent;
+	border-radius: 70px;
+	transform: translateY(-30px);
+	transition: transform 0.5s, width 0.5s, height 0.5s;
+	transition-delay: 1s, 0.5s, 0.5s;
+}
+.menuToggle.active ~ .menu
+{
+	width: 360px;
+	height: 70px;
+	transform: translateY(0px);
+	transition-delay: 0s, 0.5s, 0.5s;
+}
+.menu ul
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 90px;/*adjusts space between menu button and contents of the menu.*/
+	
+}
+
+.menu ul li
+{
+	list-style:none;
+	cursor: pointer;
+	opacity: 0;
+	visibility: visible;
+	transition: 0.25s;
+	transition-delay: calc(0s + var(--ki));
+	transform: translateY(90px); /*brings the menu from the bottom and a -90 will bring it from above.*/
+}
+
+.menuToggle.active ~.menu ul li
+{
+	opacity: 1;
+	visibility: visible;
+	transition-delay: calc(0.75s + var(--ki));
+	transform: translateY(0px);
+}
+
+.menu ul li:nth-child(4)
+{
+	width:30px;
+	
+}
+.menu ul li a
+{
+	display: block;
+	font-size: 4em;
+	text-decoration: none;
+	color: black;
+}
+
+.menu ul li:hover a
+{
+	color: red;
+}
